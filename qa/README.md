@@ -16,8 +16,8 @@ It will automatically output variables it sees as potential problems in qa/prob_
 
 __Approach__: This looks for instances where the same variable\_name appears in the same scope in the same version.
 Scope here means the way that dictionary keys are generated: [variable\_name] + [scope] + [location]
-where those values come directly from the master\_concordance\_file, except location, which is the second element of location_code split on '-'
-If two expaths to the same variable occur are (erroneously) listed in the same version, this will appear to be a problem, but it's likely not a "real" problem because only one variant appears in a version.
+where those values come directly from the master\_concordance\_file, except location, which is the second element of location_code split on '-'.
+If two xpaths to the same variable occur are (erroneously) listed in the same version, this will appear to be a problem, but it's likely not a "real" problem because only one variant appears in a version.
 
 This situation legitimately occurs in some circumstances, the most common of which is: There's an amount in a few named categories, and then the same amount in an 'other' category. Those these have different expaths and occur in the same spot, they should both get mapped to the same variable.
 
